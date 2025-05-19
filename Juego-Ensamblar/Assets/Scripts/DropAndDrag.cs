@@ -4,7 +4,7 @@ public class DropAndDrag : MonoBehaviour
 {
     private Vector3 offset;
     private float zCoord;
-    private bool isclic = false;
+    public bool isclic = false;
     private Vector3 initialPos;
     private AssemblyValidation assemblyValidation;
     private void Start()
