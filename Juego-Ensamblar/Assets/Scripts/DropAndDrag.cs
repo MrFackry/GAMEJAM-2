@@ -4,30 +4,52 @@ public class DropAndDrag : MonoBehaviour
 {
     private Vector3 offset;
     private float zCoord;
-    public bool isClic = false;
-    public int count = 0;
-
+    private bool isclic = false;
+    private Vector3 initialPos;
+    private AssemblyValidation assemblyValidation;
     private void Start()
     {
-        zCoord = Camera.main.WorldToScreenPoint(transform.position).z;//obtenemos la pocison real del objeto a un plano 2d teniendo en cuenta la distancia con el eje z
+        initialPos = gameObject.transform.position;
+        assemblyValidation = FindFirstObjectByType<AssemblyValidation>();
     }
-    void Update()
+    //detecta cuando se preciona el clic
+    private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
+        zCoord = Camera.main.WorldToScreenPoint(transform.position).z;
+        offset = transform.position - GetMouseWorldPos();
+        isclic = true;
+    }
+    //detecta cuado se dega de precionar el clic
+    private void OnMouseUp()
+    {
+        isclic = false;
+        if (!assemblyValidation.isCorectPlace)
         {
-            isClic = !isClic; // Cambia entre mover y no mover
+           gameObject.transform.position = initialPos; 
+        }else
+        {
+            gameObject.transform.position = assemblyValidation.corectPos;
         }
+        
+    }
 
-        if (isClic)
+    private void Update()
+    {
+        if (isclic)
         {
             MoveObjectWithMouse();
         }
     }
-    //metodo para mover el objeto
+
+    private Vector3 GetMouseWorldPos()
+    {
+        Vector3 mousePoint = Input.mousePosition;
+        mousePoint.z = zCoord;
+        return Camera.main.ScreenToWorldPoint(mousePoint);
+    }
+
     private void MoveObjectWithMouse()
     {
-        Vector3 mousePoint = Input.mousePosition;//obtenemos x y 
-        mousePoint.z = zCoord;//asignamos z
-        transform.position = Camera.main.ScreenToWorldPoint(mousePoint) + offset;//movemos el objeto
+        transform.position = GetMouseWorldPos() + offset;
     }
 }
