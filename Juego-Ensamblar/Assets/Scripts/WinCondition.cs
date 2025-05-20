@@ -5,6 +5,7 @@ public class WinCondition : MonoBehaviour
 {
     public GameObject menuWin;
     public Camera fCamera;
+    public GameObject levelMenu;
     public int count;
     public bool isReadyDance = false;
     public GameObject robotComplete;
@@ -22,6 +23,7 @@ public class WinCondition : MonoBehaviour
         {
             isReadyDance = true;
             menuWin.SetActive(true);
+            levelMenu.SetActive(false);
             fCamera.transform.position = new Vector3(0f,38.09f, -9.4f);
             StartCoroutine(waitDance());
         }
