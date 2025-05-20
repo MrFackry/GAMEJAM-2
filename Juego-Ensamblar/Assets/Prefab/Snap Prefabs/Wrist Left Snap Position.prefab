@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6489365947902408718}
   - component: {fileID: 8439605392250596437}
   - component: {fileID: -8665355082053724764}
+  - component: {fileID: 2808387923294404393}
   m_Layer: 0
   m_Name: Wrist Left Snap Position
-  m_TagString: Untagged
+  m_TagString: WristLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2808387923294404393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495291343280773157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6624c8ff2f46c74fb96d6ef95143da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCorectPlace: 0
+  corectPos: {x: 0, y: 0, z: 0}

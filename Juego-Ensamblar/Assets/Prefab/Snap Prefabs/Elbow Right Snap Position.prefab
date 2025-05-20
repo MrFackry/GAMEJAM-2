@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4549627552160698178}
   - component: {fileID: 1889531852519273780}
   - component: {fileID: -3576173468153582647}
+  - component: {fileID: 6915205881484475721}
   m_Layer: 0
   m_Name: Elbow Right Snap Position
-  m_TagString: Untagged
+  m_TagString: ElbowRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6915205881484475721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490050593449585850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6624c8ff2f46c74fb96d6ef95143da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCorectPlace: 0
+  corectPos: {x: 0, y: 0, z: 0}
