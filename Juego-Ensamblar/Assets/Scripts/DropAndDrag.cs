@@ -7,6 +7,7 @@ public class DropAndDrag : MonoBehaviour
     public bool isclic = false;
     private Vector3 initialPos;
     private AssemblyValidation assemblyValidation = null;
+    public int count;
     private void Start()
     {
         initialPos = gameObject.transform.position;
@@ -64,6 +65,7 @@ public class DropAndDrag : MonoBehaviour
             assemblyValidation = validation;
             assemblyValidation.isCorectPlace = true;
             initialPos = assemblyValidation.corectPos;
+            count++;
         }
     }
 
