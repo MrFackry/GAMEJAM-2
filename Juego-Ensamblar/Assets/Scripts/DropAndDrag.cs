@@ -6,11 +6,12 @@ public class DropAndDrag : MonoBehaviour
     private float zCoord;
     public bool isclic = false;
     private Vector3 initialPos;
-    private AssemblyValidation assemblyValidation;
+    private AssemblyValidation assemblyValidation = null;
+    public int count;
     private void Start()
     {
         initialPos = gameObject.transform.position;
-        assemblyValidation = FindFirstObjectByType<AssemblyValidation>();
+        assemblyValidation = FindAnyObjectByType<AssemblyValidation>();
     }
     //detecta cuando se preciona el clic
     private void OnMouseDown()
@@ -18,19 +19,21 @@ public class DropAndDrag : MonoBehaviour
         zCoord = Camera.main.WorldToScreenPoint(transform.position).z;
         offset = transform.position - GetMouseWorldPos();
         isclic = true;
+        assemblyValidation = null;
     }
     //detecta cuado se dega de precionar el clic
     private void OnMouseUp()
     {
         isclic = false;
-        if (!assemblyValidation.isCorectPlace)
+        if (assemblyValidation != null && assemblyValidation.isCorectPlace)
         {
-           gameObject.transform.position = initialPos; 
-        }else
-        {
-            gameObject.transform.position = assemblyValidation.corectPos;
+            transform.position = assemblyValidation.corectPos;
+            enabled = false;
         }
-        
+        else
+        {
+            transform.position = initialPos;
+        }
     }
 
     private void Update()
@@ -51,5 +54,29 @@ public class DropAndDrag : MonoBehaviour
     private void MoveObjectWithMouse()
     {
         transform.position = GetMouseWorldPos() + offset;
+    }
+
+    // Detecta si el objeto entra en un trigger de validación
+    private void OnTriggerEnter(Collider other)
+    {
+        AssemblyValidation validation = other.GetComponent<AssemblyValidation>();
+        if (validation != null && CompareTag(validation.targetTag)) // Compara la etiqueta de la parte con la etiqueta objetivo del lugar
+        {
+            assemblyValidation = validation;
+            assemblyValidation.isCorectPlace = true;
+            initialPos = assemblyValidation.corectPos;
+            count++;
+        }
+    }
+
+    // Detecta si el objeto sale de un trigger de validación
+    private void OnTriggerExit(Collider other)
+    {
+        AssemblyValidation validation = other.GetComponent<AssemblyValidation>();
+        if (validation != null && assemblyValidation == validation)
+        {
+            assemblyValidation.isCorectPlace = false;
+            assemblyValidation = null;
+        }
     }
 }
