@@ -75,14 +75,4 @@ public class DropAndDrag : MonoBehaviour
         }
     }
 
-    // Detecta si el objeto sale de un trigger de validación
-    private void OnTriggerExit(Collider other)
-    {
-        AssemblyValidation validation = other.GetComponent<AssemblyValidation>();
-        if (validation != null && assemblyValidation == validation)
-        {
-            assemblyValidation.isCorectPlace = false;
-            assemblyValidation = null;
-        }
-    }
 }

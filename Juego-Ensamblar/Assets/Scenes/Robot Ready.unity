@@ -1971,6 +1971,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fe161e0103a747499e4a5d38ef61227, type: 3}
+--- !u!1001 &986366000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9440053
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 41.11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 51.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_Name
+      value: Robot Complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1045957943}
+  m_SourcePrefab: {fileID: 100100000, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
 --- !u!1001 &999073134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2097,6 +2161,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e1cb89bae143d046bb9dba32b57bed0, type: 3}
+--- !u!1 &1045957941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 83663303a45e2b0439861e93d749b65e, type: 3}
+  m_PrefabInstance: {fileID: 986366000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1045957943
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045957941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1adf73ead4bc3324d9e5fd079d9f72c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1049375526 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4476200247124364901, guid: 2fe161e0103a747499e4a5d38ef61227, type: 3}
@@ -3393,8 +3484,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuWin: {fileID: 925424796}
+  camera: {fileID: 582589562}
   count: 0
-  robotComplete: {fileID: 0}
+  isReadyDance: 0
+  robotComplete: {fileID: 1045957941}
 --- !u!4 &1913847853 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6826139157722659257, guid: cae9e997664f0884a82fe4635c951e62, type: 3}
@@ -3741,6 +3834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wrist Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 495291343280773157, guid: 8499b07b35c2f6b4db9e6433fe52b232, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6489365947902408718, guid: 8499b07b35c2f6b4db9e6433fe52b232, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.281095
@@ -3845,6 +3942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Thigh Left
       objectReference: {fileID: 0}
+    - target: {fileID: 1896978373138012039, guid: de38c877ccebc3d498258d98a79b4d33, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3861,6 +3962,10 @@ PrefabInstance:
     - target: {fileID: 4940493791123362341, guid: 104d5f387a64c1848a73d655a4ed4ba3, type: 3}
       propertyPath: m_Name
       value: Robot Wrist Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940493791123362341, guid: 104d5f387a64c1848a73d655a4ed4ba3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5754465910179891359, guid: 104d5f387a64c1848a73d655a4ed4ba3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3967,6 +4072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hip Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 7774302095203824765, guid: 27f685999ededc54f9fced5c2faf497f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4027,6 +4136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Elbow Left
       objectReference: {fileID: 0}
+    - target: {fileID: 3009450338993240932, guid: 7b6e6c809c5ac57409f04f805a98631f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4084,6 +4197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Wrist Right
       objectReference: {fileID: 0}
+    - target: {fileID: 3235424591282916953, guid: 07356a73a0792414dbb495dfcaea5d05, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4140,6 +4257,10 @@ PrefabInstance:
     - target: {fileID: 5638402728383951242, guid: 59d543ba36c5c7343b68fb3c4f6694ff, type: 3}
       propertyPath: m_Name
       value: Robot Foot Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638402728383951242, guid: 59d543ba36c5c7343b68fb3c4f6694ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4206,6 +4327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fore Arm Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 8523356021668153376, guid: 5f727ab1939f9794ebcaf0ca82cc6b6e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4229,6 +4354,10 @@ PrefabInstance:
     - target: {fileID: 1632858135146856465, guid: c257888cde4ab794db6e103a68d10de6, type: 3}
       propertyPath: m_Name
       value: Shoulder Left Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632858135146856465, guid: c257888cde4ab794db6e103a68d10de6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6108727524879828048, guid: c257888cde4ab794db6e103a68d10de6, type: 3}
       propertyPath: m_IsTrigger
@@ -4342,6 +4471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Thigh Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 5023359923287965590, guid: adc5357f95e25e845bad29d500bb7bbf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4369,6 +4502,10 @@ PrefabInstance:
     - target: {fileID: 4490050593449585850, guid: a5c8eb7878b2e3947a1307a1e3fe110e, type: 3}
       propertyPath: m_Name
       value: Elbow Right Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 4490050593449585850, guid: a5c8eb7878b2e3947a1307a1e3fe110e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4549627552160698178, guid: a5c8eb7878b2e3947a1307a1e3fe110e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4429,6 +4566,10 @@ PrefabInstance:
     - target: {fileID: 3910563566471614601, guid: e75400003138696429ee15355810339f, type: 3}
       propertyPath: m_Name
       value: Robot Ankle Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 3910563566471614601, guid: e75400003138696429ee15355810339f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4399678687286413875, guid: e75400003138696429ee15355810339f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4535,6 +4676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neck Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 7612144680402774182, guid: ca6d12e9cff29d4458aeda76aa20a045, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -4598,6 +4743,10 @@ PrefabInstance:
     - target: {fileID: 2282863820737251259, guid: a2ca6d528b461334dae5cdff6bb880d8, type: 3}
       propertyPath: m_Name
       value: Elbow Left Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282863820737251259, guid: a2ca6d528b461334dae5cdff6bb880d8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4713373793314380983, guid: a2ca6d528b461334dae5cdff6bb880d8, type: 3}
       propertyPath: m_IsTrigger
@@ -4663,6 +4812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Knee Right
       objectReference: {fileID: 0}
+    - target: {fileID: 6630592934335353406, guid: e8545b78e742bef49913aaddb064d8e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4679,6 +4832,10 @@ PrefabInstance:
     - target: {fileID: 4639222612004942241, guid: e279d3f971c42c2448c753240cfb3220, type: 3}
       propertyPath: m_Name
       value: Robot Hand Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639222612004942241, guid: e279d3f971c42c2448c753240cfb3220, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5416146786088905499, guid: e279d3f971c42c2448c753240cfb3220, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4744,6 +4901,10 @@ PrefabInstance:
     - target: {fileID: 2688376877876274209, guid: 42aa87a602bacc64f9d09a9c33afa580, type: 3}
       propertyPath: m_Name
       value: Neck Right Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688376877876274209, guid: 42aa87a602bacc64f9d09a9c33afa580, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8971086572046045139, guid: 42aa87a602bacc64f9d09a9c33afa580, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4845,6 +5006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Upper Arm Left
       objectReference: {fileID: 0}
+    - target: {fileID: 5302585977929713829, guid: 3cc91d910ebe6d24d8b53f427da30fe4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4869,6 +5034,10 @@ PrefabInstance:
     - target: {fileID: 3931902902508517860, guid: 229a85eaef280ba49a59a615d5c86d0c, type: 3}
       propertyPath: m_Name
       value: Upper Arm Right Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931902902508517860, guid: 229a85eaef280ba49a59a615d5c86d0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7318668508827533346, guid: 229a85eaef280ba49a59a615d5c86d0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4930,6 +5099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Elbow Right
       objectReference: {fileID: 0}
+    - target: {fileID: 8345941329648393668, guid: 7348b0c27705e8646966a5a97f27869a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8690097658381059966, guid: 7348b0c27705e8646966a5a97f27869a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.702
@@ -4987,6 +5160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Upper Arm Right
       objectReference: {fileID: 0}
+    - target: {fileID: 7319725469365153624, guid: 1945745f8ac24f445ae9b92cec96e11b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7989160497923749346, guid: 1945745f8ac24f445ae9b92cec96e11b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.205548
@@ -5043,6 +5220,10 @@ PrefabInstance:
     - target: {fileID: 2566491040395180383, guid: cf43d3acc86ffad49a15428ad6353ca7, type: 3}
       propertyPath: m_Name
       value: Neck Central Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 2566491040395180383, guid: cf43d3acc86ffad49a15428ad6353ca7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5660559271162327260, guid: cf43d3acc86ffad49a15428ad6353ca7, type: 3}
       propertyPath: m_Constraints
@@ -5160,6 +5341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Calf Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 3980085140016476935, guid: 1d10443c37f5dff439b94c68e4a0ba10, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6411173039478113569, guid: 1d10443c37f5dff439b94c68e4a0ba10, type: 3}
       propertyPath: isCorectPlace
       value: 0
@@ -5183,6 +5368,10 @@ PrefabInstance:
     - target: {fileID: 1391229298034535132, guid: b02cf25c6c42fc74cb4f8f735e6569e6, type: 3}
       propertyPath: m_Name
       value: Robot Shoulder Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391229298034535132, guid: b02cf25c6c42fc74cb4f8f735e6569e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1730916077590196326, guid: b02cf25c6c42fc74cb4f8f735e6569e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5240,6 +5429,10 @@ PrefabInstance:
     - target: {fileID: 3776227293423961157, guid: b718195ebc4feac4086e566724b0a1de, type: 3}
       propertyPath: m_Name
       value: Robot Ankle Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776227293423961157, guid: b718195ebc4feac4086e566724b0a1de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4552024438020497151, guid: b718195ebc4feac4086e566724b0a1de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5338,6 +5531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fore Arm Right Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 6394656284385557934, guid: ab0873c6f5959e840ba9207adfb0d2dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7340997912264394447, guid: ab0873c6f5959e840ba9207adfb0d2dd, type: 3}
       propertyPath: m_Constraints
       value: 126
@@ -5365,6 +5562,10 @@ PrefabInstance:
     - target: {fileID: 3595569412999035414, guid: d9e5c9d763655484bad033fbc7323d28, type: 3}
       propertyPath: m_Name
       value: Robot Foot Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595569412999035414, guid: d9e5c9d763655484bad033fbc7323d28, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4228273085886849196, guid: d9e5c9d763655484bad033fbc7323d28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5463,6 +5664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Thigh Right
       objectReference: {fileID: 0}
+    - target: {fileID: 1055765195951889534, guid: ece04fd8bd9a38a47a723dd45e30e51d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5519,6 +5724,10 @@ PrefabInstance:
     - target: {fileID: 1920066476053737362, guid: 0f7f4de780968c24688a5b1ac831a49d, type: 3}
       propertyPath: m_Name
       value: Robot Knee Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920066476053737362, guid: 0f7f4de780968c24688a5b1ac831a49d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5577,6 +5786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Hip Right
       objectReference: {fileID: 0}
+    - target: {fileID: 6790742085291973310, guid: 95c0786dda30336478d731bfe2b43a5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5593,6 +5806,10 @@ PrefabInstance:
     - target: {fileID: 2868544376693817562, guid: b8213fb2436c46c4ba2591a191e83e73, type: 3}
       propertyPath: m_Name
       value: Robot Fore Arm Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868544376693817562, guid: b8213fb2436c46c4ba2591a191e83e73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3207914530998311520, guid: b8213fb2436c46c4ba2591a191e83e73, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5650,6 +5867,10 @@ PrefabInstance:
     - target: {fileID: 2117535814993119690, guid: 5307be4e845ba3e49b7ceb7182ef0c4a, type: 3}
       propertyPath: m_Name
       value: Ankle Left Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 2117535814993119690, guid: 5307be4e845ba3e49b7ceb7182ef0c4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2426631670659413507, guid: 5307be4e845ba3e49b7ceb7182ef0c4a, type: 3}
       propertyPath: m_IsTrigger
@@ -5763,6 +5984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Head Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 7918582146068548526, guid: fa8803ba6fc12eb4ab839086ebe75853, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8092281818917746822, guid: fa8803ba6fc12eb4ab839086ebe75853, type: 3}
       propertyPath: m_Constraints
       value: 126
@@ -5835,6 +6060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hip Right Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 4273343064625831835, guid: 0e21a66dd874adb4fa617da730b559fa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5898,6 +6127,10 @@ PrefabInstance:
     - target: {fileID: 7080991951917263348, guid: edf162d1154fb414595a2bd629137437, type: 3}
       propertyPath: m_Name
       value: Hip Central Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 7080991951917263348, guid: edf162d1154fb414595a2bd629137437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7365016534850600127, guid: edf162d1154fb414595a2bd629137437, type: 3}
       propertyPath: m_IsTrigger
@@ -5971,6 +6204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knee Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 8274483293427909410, guid: cae9e997664f0884a82fe4635c951e62, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6030,6 +6267,10 @@ PrefabInstance:
     - target: {fileID: 1883678954093716024, guid: 8eb0dd43ad9197e48ae3f1f7b5894d32, type: 3}
       propertyPath: m_Name
       value: Robot Shoulder Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883678954093716024, guid: 8eb0dd43ad9197e48ae3f1f7b5894d32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6096,6 +6337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 4275011700135472630, guid: 23d1e2cb59044e540bd63c1481a9136a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6115,6 +6360,10 @@ PrefabInstance:
     - target: {fileID: 3979439145826311548, guid: b409de99ac08cf94cbb275f29750cc15, type: 3}
       propertyPath: m_Name
       value: Robot Hip Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 3979439145826311548, guid: b409de99ac08cf94cbb275f29750cc15, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4355577312628082630, guid: b409de99ac08cf94cbb275f29750cc15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6213,6 +6462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Neck Central
       objectReference: {fileID: 0}
+    - target: {fileID: 6373072280975150974, guid: 1eca0165f9ae0b244b1d33bf617f506f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6270,6 +6523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Calf Right
       objectReference: {fileID: 0}
+    - target: {fileID: 7995201304365452103, guid: b36af29ae5eebb14fbdddd0a8c0c30e4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6286,6 +6543,10 @@ PrefabInstance:
     - target: {fileID: 1714644621903964807, guid: 9e098e6a415abbc4fb72b1ecbc2b8672, type: 3}
       propertyPath: m_Name
       value: Shoulder Right Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714644621903964807, guid: 9e098e6a415abbc4fb72b1ecbc2b8672, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6015296066032885148, guid: 9e098e6a415abbc4fb72b1ecbc2b8672, type: 3}
       propertyPath: m_IsTrigger
@@ -6395,6 +6656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Abdomen
       objectReference: {fileID: 0}
+    - target: {fileID: 761527223925557189, guid: 20778835aef3e694c86f42a5775bcce1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6451,6 +6716,10 @@ PrefabInstance:
     - target: {fileID: 3298125121387497812, guid: bd101cdabe21e4d43bd745df3a832c20, type: 3}
       propertyPath: m_Name
       value: Robot Calf Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298125121387497812, guid: bd101cdabe21e4d43bd745df3a832c20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6509,6 +6778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wrist Right Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 4003898917286977656, guid: ea37b3d197388ed41a87483a7b997172, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7209895325711153280, guid: ea37b3d197388ed41a87483a7b997172, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -6544,6 +6817,10 @@ PrefabInstance:
     - target: {fileID: 1391187519008999925, guid: 54bc0c542475fe9408f7defb2f8f928d, type: 3}
       propertyPath: m_Name
       value: Hand Left Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391187519008999925, guid: 54bc0c542475fe9408f7defb2f8f928d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9030046700039615576, guid: 54bc0c542475fe9408f7defb2f8f928d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6649,6 +6926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ankle Right Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 1343775007006228170, guid: 17a96bccfd1b1ad4dbaee3d0efad6bb3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1827578214138552444, guid: 17a96bccfd1b1ad4dbaee3d0efad6bb3, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -6713,6 +6994,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Neck Left
       objectReference: {fileID: 0}
+    - target: {fileID: 5253014061537628639, guid: 7ab90ba012747244f9670af84e1c977a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6770,6 +7055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Hand Left
       objectReference: {fileID: 0}
+    - target: {fileID: 676848530974110193, guid: 32b500f07d092904383d492621eefcb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6826,6 +7115,10 @@ PrefabInstance:
     - target: {fileID: 5607347153181912152, guid: 4f6d76e68bf80c34186acd248080edb4, type: 3}
       propertyPath: m_Name
       value: Robot Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607347153181912152, guid: 4f6d76e68bf80c34186acd248080edb4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6892,6 +7185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knee Right Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 6921623369748525973, guid: ff2b1445e637c194886321d10439e279, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6911,6 +7208,10 @@ PrefabInstance:
     - target: {fileID: 1944923085416479027, guid: fc6f8ed1b96f8a64a8dd96b8625ea55e, type: 3}
       propertyPath: m_Name
       value: Foot Right Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944923085416479027, guid: fc6f8ed1b96f8a64a8dd96b8625ea55e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3449628116108613766, guid: fc6f8ed1b96f8a64a8dd96b8625ea55e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6983,6 +7284,10 @@ PrefabInstance:
     - target: {fileID: 1695922694838916024, guid: d68c80132f9a29a4498d688be5fbfa89, type: 3}
       propertyPath: m_Name
       value: Upper Arm Left Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695922694838916024, guid: d68c80132f9a29a4498d688be5fbfa89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2391392749479460620, guid: d68c80132f9a29a4498d688be5fbfa89, type: 3}
       propertyPath: m_Constraints
@@ -7096,6 +7401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Foot Left Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 7986969895546250768, guid: 0fc88a5ec525f8043bd4c650e7c7fb63, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7119,6 +7428,10 @@ PrefabInstance:
     - target: {fileID: 924734778224879483, guid: 89a61ac505bc56d4a8821a1185c56b36, type: 3}
       propertyPath: m_Name
       value: Abdomen Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 924734778224879483, guid: 89a61ac505bc56d4a8821a1185c56b36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6474014390754350454, guid: 89a61ac505bc56d4a8821a1185c56b36, type: 3}
       propertyPath: m_IsTrigger
@@ -7183,6 +7496,10 @@ PrefabInstance:
     - target: {fileID: 3887538219709949274, guid: 9d13f1beea98c2a48a9840ef21fbf666, type: 3}
       propertyPath: m_Name
       value: Robot Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887538219709949274, guid: 9d13f1beea98c2a48a9840ef21fbf666, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4519537896505524192, guid: 9d13f1beea98c2a48a9840ef21fbf666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7281,6 +7598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Fore Arm Right
       objectReference: {fileID: 0}
+    - target: {fileID: 5219862842528740127, guid: 9dbea041764e1d748a440e6118b306e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7301,6 +7622,10 @@ PrefabInstance:
     - target: {fileID: 446139820637546764, guid: ebb4aa99b848ba94185288f4a6a05495, type: 3}
       propertyPath: m_Name
       value: Thigh Right Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 446139820637546764, guid: ebb4aa99b848ba94185288f4a6a05495, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3086611574662071185, guid: ebb4aa99b848ba94185288f4a6a05495, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7406,6 +7731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Neck Right
       objectReference: {fileID: 0}
+    - target: {fileID: 2223694995840890299, guid: ae66aec7775a92045be89bffb5d1ca1f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7470,6 +7799,10 @@ PrefabInstance:
     - target: {fileID: 5387658035435462486, guid: 03775524f5083ed4db25568c3ec804b7, type: 3}
       propertyPath: m_Name
       value: Calf right Snap Position
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387658035435462486, guid: 03775524f5083ed4db25568c3ec804b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8893150803554331652, guid: 03775524f5083ed4db25568c3ec804b7, type: 3}
       propertyPath: isCorectPlace
@@ -7543,6 +7876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand Right Snap Position
       objectReference: {fileID: 0}
+    - target: {fileID: 7402751903641795745, guid: a7a2160696bd4064c9b563b36ce3123a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -7562,6 +7899,10 @@ PrefabInstance:
     - target: {fileID: 3846714872288244398, guid: 09a2239b48e4dda44a2cae201d2b8909, type: 3}
       propertyPath: m_Name
       value: Robot Hip Central
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846714872288244398, guid: 09a2239b48e4dda44a2cae201d2b8909, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4479276674332207124, guid: 09a2239b48e4dda44a2cae201d2b8909, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7681,3 +8022,4 @@ SceneRoots:
   - {fileID: 173503922}
   - {fileID: 1039350720}
   - {fileID: 1705072962}
+  - {fileID: 986366000}
