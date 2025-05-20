@@ -19,7 +19,7 @@ public class WinCondition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count == 3)
+        if (count == 31)
         {
             isReadyDance = true;
             menuWin.SetActive(true);
