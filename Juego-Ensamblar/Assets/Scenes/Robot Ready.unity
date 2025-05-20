@@ -3484,7 +3484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuWin: {fileID: 925424796}
-  camera: {fileID: 582589562}
+  fCamera: {fileID: 582589562}
+  levelMenu: {fileID: 1613618074}
   count: 0
   isReadyDance: 0
   robotComplete: {fileID: 1045957941}
