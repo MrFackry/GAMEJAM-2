@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class DropAndDrag : MonoBehaviour
@@ -5,13 +7,16 @@ public class DropAndDrag : MonoBehaviour
     private Vector3 offset;
     private float zCoord;
     public bool isclic = false;
+    public bool posV = false;
     private Vector3 initialPos;
     private AssemblyValidation assemblyValidation = null;
-    public int count;
+    private int part;
+    private WinCondition winCondition;
     private void Start()
     {
         initialPos = gameObject.transform.position;
         assemblyValidation = FindAnyObjectByType<AssemblyValidation>();
+        winCondition = FindFirstObjectByType<WinCondition>();
     }
     //detecta cuando se preciona el clic
     private void OnMouseDown()
@@ -29,6 +34,8 @@ public class DropAndDrag : MonoBehaviour
         {
             transform.position = assemblyValidation.corectPos;
             enabled = false;
+            part++;
+            winCondition.count += part;
         }
         else
         {
@@ -65,7 +72,6 @@ public class DropAndDrag : MonoBehaviour
             assemblyValidation = validation;
             assemblyValidation.isCorectPlace = true;
             initialPos = assemblyValidation.corectPos;
-            count++;
         }
     }
 

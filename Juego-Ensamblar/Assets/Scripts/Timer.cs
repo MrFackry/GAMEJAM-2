@@ -6,32 +6,30 @@ public class Timer : MonoBehaviour
 {
     public float timer = 0f;
     public Text timerText;
-    private DropAndDrag dropAndDrag;
     public bool shouldStart;
     void Start()
     {
-
-        dropAndDrag = FindFirstObjectByType<DropAndDrag>();
         shouldStart = false;
-        
 
     }
-   
+
     void Update()
     {
-        if (dropAndDrag.isclic)
-        {
-            shouldStart = true;
-        }
-       
+        OnMouseDown();
         if (shouldStart)
         {
             timer -= Time.deltaTime;
             timerText.text = "" + timer.ToString("f1");
         }
-      if (timer < 0)
+        if (timer < 0)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(2);
         }
+    }
+
+    void OnMouseDown()
+    {
+        shouldStart = true;
+        Debug.Log("click ativa timmer");
     }
 }
