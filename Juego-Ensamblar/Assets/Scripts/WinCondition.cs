@@ -9,6 +9,7 @@ public class WinCondition : MonoBehaviour
     public int count;
     public bool isReadyDance = false;
     public GameObject robotComplete;
+    public GameObject luz;
     private int danceDuration = 3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,7 +20,7 @@ public class WinCondition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (count == 32)
+        if (count == 31)
         {
             isReadyDance = true;
             menuWin.SetActive(true);
@@ -34,6 +35,7 @@ public class WinCondition : MonoBehaviour
         if (isReadyDance)
         {
             robotComplete.SetActive(true);
+            luz.SetActive(true);
             yield return new WaitForSeconds(danceDuration);
             Time.timeScale = 0;
         }
